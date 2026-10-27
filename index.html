@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang='ar' dir='rtl'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1, viewport-fit=cover'>
+<meta name='theme-color' content='#071A37'>
+<title>SHIELD ALPHA SUPREME AI</title>
+<link rel='preconnect' href='https://fonts.googleapis.com'>
+<link rel='preconnect' href='https://fonts.gstatic.com' crossorigin>
+<link href='https://fonts.googleapis.com/css2?family=Cairo:wght@600;700&family=IBM+Plex+Sans+Arabic:wght@400;500;600&display=swap' rel='stylesheet'>
+<style>
+:root{--bg:#071A37;--card:#0c2448;--gold:#C5A15A;--ivory:#F3EEE4;--muted:#9AABBE;--line:rgba(197,161,90,.34);--danger:#E07A68;--ok:#9CB89A}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:radial-gradient(900px 420px at 110% -10%,rgba(197,161,90,.16),transparent 55%),var(--bg);color:var(--ivory);font-family:'IBM Plex Sans Arabic',Cairo,Tahoma,sans-serif;font-size:16px;line-height:1.65;padding-bottom:96px}
+header,main{width:min(980px,calc(100% - 28px));margin-inline:auto}
+header{display:flex;align-items:center;gap:12px;padding:16px 0 12px;position:sticky;top:0;z-index:5;background:rgba(7,26,55,.94);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+h1{font-family:Cairo,sans-serif;font-size:16px;line-height:1.2;margin:0;letter-spacing:.04em}
+h1 small{display:block;color:var(--gold);font-size:11px;letter-spacing:.18em;font-weight:600}
+.grow{flex:1}
+.lang,.pill{border:1px solid var(--line);background:transparent;color:var(--ivory);border-radius:999px;padding:7px 12px;font:600 13px Cairo,sans-serif}
+.pill{color:var(--danger)}
+.banner{margin:14px 0;padding:10px 12px;border:1px solid var(--line);border-radius:12px;color:var(--gold);font-size:14px}
+.seal{text-align:center;margin:8px auto 16px;max-width:280px;padding:22px 16px;border:1px solid var(--gold);border-radius:999px;box-shadow:inset 0 0 0 5px #071A37,inset 0 0 0 6px rgba(197,161,90,.5)}
+.seal span{color:var(--muted);font-size:13px}
+.seal b{display:block;font-family:Cairo,sans-serif;font-size:32px;color:var(--gold);line-height:1.2}
+.seal small{color:var(--muted)}
+h2{font-family:Cairo,sans-serif;font-size:18px;margin:22px 0 10px}
+.kpis,.agents,.cards,.limits{display:grid;gap:10px}
+.kpis,.agents{grid-template-columns:1fr 1fr}
+.card{background:linear-gradient(180deg,rgba(197,161,90,.07),rgba(12,36,72,.8));border:1px solid var(--line);border-radius:16px;padding:14px}
+.card .lbl{color:var(--muted);font-size:12px}
+.card strong{display:block;font-family:Cairo,sans-serif;font-size:16px}
+.card em{font-style:normal;color:var(--danger);font-size:13px}
+.pipe{display:flex;gap:8px;overflow:auto;padding-bottom:6px}
+.step{min-width:92px;border:1px solid var(--line);border-radius:12px;padding:8px;font-size:12px}
+.step b{display:block;color:var(--gold);font-family:Cairo,sans-serif}
+.bad{color:var(--danger)!important}
+.sym{font-family:Cairo,sans-serif;font-size:18px;margin:0}
+.tag{display:inline-block;border:1px solid var(--danger);color:var(--danger);border-radius:999px;padding:2px 8px;font-size:12px}
+.row{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(197,161,90,.15);padding:7px 0;font-size:14px}
+.row span{color:var(--muted)}
+form{display:grid;gap:10px}
+label{display:grid;gap:4px;font-size:14px;color:var(--muted)}
+input{width:100%;background:#071426;color:var(--ivory);border:1px solid var(--line);border-radius:12px;padding:12px;font:16px 'IBM Plex Sans Arabic',sans-serif}
+button.act,button.stop,button.owner{width:100%;border-radius:14px;padding:14px;font:700 16px Cairo,sans-serif}
+button.act{background:var(--gold);color:#071A37;border:0}
+button.stop{background:transparent;color:var(--danger);border:1px solid var(--danger);margin-top:10px}
+button.owner{background:transparent;color:var(--gold);border:1px solid var(--gold);margin-top:8px}
+#out{min-height:1.2em}
+#log{font-size:13px;color:var(--muted)}
+#log div{border-bottom:1px solid rgba(197,161,90,.12);padding:8px 0}
+nav{position:fixed;bottom:0;left:0;right:0;display:flex;gap:6px;justify-content:space-around;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:rgba(4,16,31,.96);border-top:1px solid var(--line)}
+nav a{color:var(--ivory);text-decoration:none;font:600 13px Cairo,sans-serif}
+footer{color:var(--muted);font-size:12px;margin:18px 0 8px}
+@media(min-width:800px){.cards{grid-template-columns:1fr 1fr}.agents{grid-template-columns:repeat(4,1fr)}}
+</style>
+</head>
+<body>
+<header>
+<svg viewBox='0 0 64 64' width='40' height='40' aria-hidden='true'><path d='M32 4 L56 14 V30 C56 46 44 56 32 60 C20 56 8 46 8 30 V14 Z' fill='none' stroke='#C5A15A' stroke-width='2'/><path d='M32 18 L44 46 H38 L36 39 H28 L26 46 H20 Z' fill='#C5A15A'/></svg>
+<h1>SHIELD ALPHA<small>SUPREME AI · v1.0</small></h1>
+<div class='grow'></div>
+<button class='lang' id='lang' type='button'>EN</button>
+<div class='pill' id='conn'></div>
+</header>
+<main>
+<p class='banner' id='banner'></p>
+<section class='seal' id='desk'>
+<span id='sealK'></span>
+<b id='sealB'></b>
+<small>Risk Guardian</small>
+</section>
+<h2 id='tAccount'></h2>
+<div class='kpis' id='kpis'></div>
+<h2 id='tAgents'></h2>
+<div class='agents' id='agents'></div>
+<h2 id='tPipe'></h2>
+<div class='pipe' id='pipe'></div>
+<h2 id='opps'></h2>
+<div class='cards' id='cards'></div>
+<h2 id='risk'></h2>
+<div class='card limits' id='limits'></div>
+<div class='card' style='margin-top:10px'>
+<form id='calc'>
+<label><span id='lEq'></span><input id='equity' inputmode='decimal' autocomplete='off'></label>
+<label><span id='lLoss'></span><input id='loss' inputmode='decimal' autocomplete='off'></label>
+<button class='act' type='submit' id='btnCalc'></button>
+</form>
+<p id='out'></p>
+<button class='stop' id='halt' type='button'></button>
+<button class='owner' id='owner' type='button'></button>
+</div>
+<h2 id='logH'></h2>
+<div class='card' id='log'></div>
+<footer id='foot'></footer>
+</main>
+<nav>
+<a href='#desk' id='n1'></a>
+<a href='#opps' id='n2'></a>
+<a href='#risk' id='n3'></a>
+<a href='#logH' id='n4'></a>
+</nav>
+<script>
+var LIVE_ARMED = false;
+var T = {
+ ar:{
+  conn:'منقطع', banner:'وضع ورقي فقط. هذه الصفحة لا تتصل بحساب ADSS ولا ترسل أوامر. التداول الحقيقي مقفل.',
+  sealK:'قرار نافذ', sealB:'لا تداول', account:'الحساب', agents:'الوكلاء', pipe:'خط سير القرار', opps:'الفرص', risk:'الحماية', log:'سجل التدقيق',
+  kpis:[['الرصيد','غير متاح'],['الهامش','غير متاح'],['التعرض','لا صفقات معروفة'],['الربح والخسارة','لا يُعرض']],
+  ag:[['استخبارات السوق','لا تغذية'],['التوقع','غير معاير'],['اكتشاف الفرص','لا مرشح مؤهل'],['حارس المخاطر','نقض نافذ'],['التنفيذ','مغلق'],['التعلم','ممنوع من النشر'],['التدقيق','سجل هذا المتصفح فقط'],['المالك','لم يُسلّح الحي']],
+  steps:[['DATA','فشل'],['REGIME','لم يُقيّم'],['SIGNAL','ناقص'],['MODEL','فشل'],['COST','فشل'],['RISK','نقض'],['EXEC','مغلق'],['AUDIT','سُجّل']],
+  cards:[
+    ['XAUUSD','الذهب','غير معتمد','دولار صلب وأسبوع بنوك مركزية. لا سعر دخول ولا احتمال.'],
+    ['EURUSD','يورو/دولار','ضعف بحثي فقط','الميل لا يكفي. التكلفة غير معروفة والتغذية منقطعة.'],
+    ['GBPUSD','إسترليني/دولار','مرفوض','خطر فجوة مرتبط بالميزانية. لا صفقة.']
+  ],
+  lim:[['0.25%','لكل صفقة'],['1%','خسارة يومية'],['3%','خسارة أسبوعية'],['5%','إيقاف ومراجعة']],
+  eq:'الرصيد التجريبي', loss:'خسارة أصغر عقد عند الوقف، بعملة الحساب', calc:'افحص الحجم',
+  haltOn:'إيقاف طارئ — منع أوامر جديدة', haltOff:'الإيقاف الطارئ مفعّل. رفعه لا يفتح التنفيذ',
+  owner:'اعتماد المالك للتداول الحقيقي', ownerMsg:'مرفوض. هذه الصفحة لا تستطيع تسليح الحساب الحقيقي.',
+  need:'أدخل رقمين موجبين.',
+  sizeBad:'مرفوض. خسارة أصغر عقد أكبر من سقف 0.25%. لا تُرفع المخاطرة لتناسب العقد.',
+  sizeOk:'الحجم وحده مقبول لو اكتملت باقي البوابات. التنفيذ ما زال مرفوضاً: لا تغذية، ولا تكلفة مُحققة، ولا نموذج معاير.',
+  budget:'سقف الصفقة', units:'عدد أصغر عقد مسموح',
+  foot:'عقود الفروقات قد تخسر أكثر من المبلغ المدفوع وبسرعة. لا وعد بعائد. السجل هنا محلي في متصفحك وليس سجل الوسيط. بناء 28 أكتوبر 2026.',
+  n:['القيادة','الفرص','المخاطر','السجل'], rej:'مرفوض'
+ },
+ en:{
+  conn:'OFFLINE', banner:'PAPER ONLY. This page is not connected to ADSS and sends no orders. Live trading is locked.',
+  sealK:'Standing order', sealB:'NO TRADE', account:'Account', agents:'Agents', pipe:'Decision path', opps:'Opportunities', risk:'Protection', log:'Audit log',
+  kpis:[['Balance','Unavailable'],['Margin','Unavailable'],['Exposure','No known positions'],['P&L','Not shown']],
+  ag:[['Market intelligence','No feed'],['Forecast','Not calibrated'],['Opportunity','None eligible'],['Risk Guardian','Veto stands'],['Execution','Closed'],['Learning','Cannot deploy'],['Audit','This browser only'],['Owner','Live not armed']],
+  steps:[['DATA','FAIL'],['REGIME','NOT RATED'],['SIGNAL','INCOMPLETE'],['MODEL','FAIL'],['COST','FAIL'],['RISK','VETO'],['EXEC','LOCKED'],['AUDIT','LOGGED']],
+  cards:[
+    ['XAUUSD','Gold','Not approved','Firm dollar and a central-bank week. No entry and no probability.'],
+    ['EURUSD','Euro / dollar','Research bias only','A lean is not enough. Cost is unknown and the feed is down.'],
+    ['GBPUSD','Sterling / dollar','Rejected','Budget-gap risk. No trade.']
+  ],
+  lim:[['0.25%','per trade'],['1%','daily loss'],['3%','weekly loss'],['5%','halt and review']],
+  eq:'Demo equity', loss:'Loss of the smallest contract at the stop, in account currency', calc:'Check size',
+  haltOn:'Emergency halt — block new orders', haltOff:'Halt is on. Lifting it does not enable execution',
+  owner:'Owner approval for live trading', ownerMsg:'Refused. This page cannot arm a live account.',
+  need:'Enter two positive numbers.',
+  sizeBad:'Rejected. The smallest contract loses more than the 0.25% cap. Risk is not raised to fit the contract.',
+  sizeOk:'Size alone would pass if every other gate passed. Execution is still rejected: no feed, no verified cost, no calibrated model.',
+  budget:'Trade cap', units:'Smallest contracts allowed',
+  foot:'CFDs can lose more than the amount paid, and quickly. No return is promised. This log is local to your browser, not the broker journal. Built 28 October 2026.',
+  n:['Desk','Ideas','Risk','Log'], rej:'REJECTED'
+ }
+};
+var lang = localStorage.getItem('shield-lang') || 'ar';
+var halt = localStorage.getItem('shield-halt') === '1';
+var audit = [];
+try { audit = JSON.parse(localStorage.getItem('shield-audit') || '[]'); } catch(e){ audit = []; }
+function save(){ localStorage.setItem('shield-audit', JSON.stringify(audit.slice(0,40))); }
+function addAudit(msg){
+  audit.unshift({t:new Date().toISOString(), msg:msg});
+  save();
+}
+function money(n){ return (Math.round(n*100)/100).toLocaleString(lang==='ar'?'ar':'en',{maximumFractionDigits:2}); }
+function paint(){
+  var d = T[lang];
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang==='ar'?'rtl':'ltr';
+  document.getElementById('lang').textContent = lang==='ar'?'EN':'عربي';
+  document.getElementById('conn').textContent = d.conn;
+  document.getElementById('banner').textContent = d.banner;
+  document.getElementById('sealK').textContent = d.sealK;
+  document.getElementById('sealB').textContent = d.sealB;
+  document.getElementById('tAccount').textContent = d.account;
+  document.getElementById('tAgents').textContent = d.agents;
+  document.getElementById('tPipe').textContent = d.pipe;
+  document.getElementById('opps').textContent = d.opps;
+  document.getElementById('risk').textContent = d.risk;
+  document.getElementById('logH').textContent = d.log;
+  document.getElementById('lEq').textContent = d.eq;
+  document.getElementById('lLoss').textContent = d.loss;
+  document.getElementById('btnCalc').textContent = d.calc;
+  document.getElementById('halt').textContent = halt ? d.haltOff : d.haltOn;
+  document.getElementById('owner').textContent = d.owner;
+  document.getElementById('foot').textContent = d.foot;
+  for(var i=0;i<4;i++) document.getElementById('n'+(i+1)).textContent = d.n[i];
+  document.getElementById('kpis').innerHTML = d.kpis.map(function(x){return '<div class="card"><div class="lbl">'+x[0]+'</div><strong>'+x[1]+'</strong></div>';}).join('');
+  document.getElementById('agents').innerHTML = d.ag.map(function(x){return '<div class="card"><div class="lbl">'+x[0]+'</div><strong>'+x[1]+'</strong></div>';}).join('');
+  document.getElementById('pipe').innerHTML = d.steps.map(function(x){return '<div class="step"><b class="bad">'+x[1]+'</b>'+x[0]+'</div>';}).join('');
+  document.getElementById('cards').innerHTML = d.cards.map(function(x){return '<article class="card"><p class="sym">'+x[0]+'</p><div class="lbl">'+x[1]+'</div><p>'+x[2]+'</p><p>'+x[3]+'</p><span class="tag">'+d.rej+'</span></article>';}).join('');
+  document.getElementById('limits').innerHTML = d.lim.map(function(x){return '<div class="row"><b>'+x[0]+'</b><span>'+x[1]+'</span></div>';}).join('');
+  var log = document.getElementById('log');
+  log.innerHTML = audit.length ? audit.map(function(e){return '<div>'+e.t.replace('T',' ').slice(0,19)+' — '+e.msg+'</div>';}).join('') : '<div>—</div>';
+}
+document.getElementById('lang').onclick = function(){ lang = lang==='ar'?'en':'ar'; localStorage.setItem('shield-lang', lang); paint(); };
+document.getElementById('halt').onclick = function(){
+  halt = !halt;
+  localStorage.setItem('shield-halt', halt?'1':'0');
+  addAudit(halt?'EMERGENCY_HALT':'HALT_LIFTED_EXECUTION_STILL_LOCKED');
+  paint();
+};
+document.getElementById('owner').onclick = function(){
+  addAudit('LIVE_ARM_REFUSED');
+  paint();
+  document.getElementById('out').textContent = T[lang].ownerMsg;
+};
+document.getElementById('calc').onsubmit = function(ev){
+  ev.preventDefault();
+  var d = T[lang];
+  var equity = Number(document.getElementById('equity').value);
+  var loss = Number(document.getElementById('loss').value);
+  if(!(equity>0) || !(loss>0)){ document.getElementById('out').textContent = d.need; return; }
+  var budget = equity * 0.0025;
+  var msg;
+  if(loss > budget + 1e-9){
+    msg = d.sizeBad + ' ' + d.budget + ': ' + money(budget);
+    addAudit('SIZE_REJECTED budget='+budget.toFixed(2));
+  } else {
+    var n = Math.floor(budget / loss);
+    msg = d.sizeOk + ' ' + d.budget + ': ' + money(budget) + '. ' + d.units + ': ' + n + '.';
+    addAudit('SIZE_OK_EXECUTION_STILL_REJECTED contracts='+n);
+  }
+  if(halt) msg += ' ' + d.haltOff;
+  document.getElementById('out').textContent = msg;
+  paint();
+};
+if(!audit.length) addAudit('SESSION_OPEN PAPER_ONLY LIVE_LOCKED NO_BROKER_FEED');
+paint();
+</script>
+</body>
+</html>
